@@ -24,33 +24,41 @@ It combines a trained XGBoost model, a Flask backend API, and a Streamlit-based 
 
 ## Project Structure
 car_price_prediction/
+```
 │── app.py # Flask backend API
 │── streamlit_app.py # Streamlit interface
 │── CarPricePrediction.ipynb # EDA + model training notebook
 │── model.pkl / model.json # Trained model
 │── requirements.txt # Dependencies
 │── README.md # Documentation
+```
 
----
 
 ## How to Run
 
 ### 1. Clone the Repository
+```
 git clone https://github.com/Vxrun10/car_price_prediction.git
 
 cd car_price_prediction
+```
 
 
 ### 2. Install Dependencies
+```
 pip install -r requirements.txt
-
+```
 
 ### 3. Run the Flask API
+```
 python app.py
+```
 
 
 ### 4. Run the Streamlit App
+```
 streamlit run streamlit_app.py
+```
 
 
 ---
