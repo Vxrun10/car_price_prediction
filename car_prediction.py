@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import datetime
-import xgboost as Xgb
+import xgboost as xgb
 import streamlit as st
 
 def main():
