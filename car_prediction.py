@@ -2,6 +2,7 @@ import numpy as np
 import datetime
 import xgboost as xgb
 import streamlit as st
+import pandas as pd
 
 def main():
     html_temp = "<h1>Car Price Prediction</h1>"
@@ -29,9 +30,22 @@ def main():
     current_year = datetime.datetime.now().year
     years = st.number_input("Car purchased year", 1990, current_year, step=1)
     p7 = current_year - years
+    
 
     # Convert to numpy array
     data = np.array([[p1, p2, p3, p4, p5, p6, p7]])
+    
+    # Create dataframe with feature names
+    data = pd.DataFrame([{
+    'Present_Price': p1,
+    'Kms_Driven': p2,
+    'Fuel_Type': p3,
+    'Seller_Type': p4,
+    'Transmission': p5,
+    'Owner': p6,
+    'Age': p7
+    }])
+
 
     # Convert to DMatrix
     dmatrix = xgb.DMatrix(data)
